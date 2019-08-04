@@ -1,0 +1,1 @@
+aws emr create-cluster --name "final_commom" --ec2-attributes SubnetId=subnet-395a7a17 --release-label emr-5.4.0 --auto-terminate --log-uri s3://bugginglog/ --use-default-roles --enable-debugging --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=c4.large InstanceGroupType=CORE,InstanceCount=3,InstanceType=c4.large --steps file://wet_mypart.json
